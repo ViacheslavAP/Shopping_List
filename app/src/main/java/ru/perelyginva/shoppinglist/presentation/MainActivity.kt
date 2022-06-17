@@ -1,7 +1,8 @@
-package ru.perelyginva.shoppinglist
+package ru.perelyginva.shoppinglist.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import ru.perelyginva.shoppinglist.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
