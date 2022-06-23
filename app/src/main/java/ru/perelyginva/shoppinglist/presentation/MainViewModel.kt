@@ -1,5 +1,6 @@
 package ru.perelyginva.shoppinglist.presentation
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import ru.perelyginva.shoppinglist.data.ShopListRepositoryImpl
@@ -16,19 +17,10 @@ class MainViewModel: ViewModel() {
     private val deleteShopUseCase = DeleteShopUseCase(repository)
     private val editShopItemUseCase = EditShopItemUseCase(repository)
 
-    val shopList = MutableLiveData<List<ShopItem>>()
-
-
-    fun getShopList(){
-        val list = getShopListUseCase.getShopList()
-        shopList.value = list
-    }
-
-
+    val shopList = getShopListUseCase.getShopList()
 
     fun deleteShopList(shopItem: ShopItem){
         deleteShopUseCase.deleteShopItem(shopItem)
-        getShopList()
     }
 
     fun changeEnableState(shopItem: ShopItem){
