@@ -1,7 +1,6 @@
 package ru.perelyginva.shoppinglist.presentation
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+
 import androidx.lifecycle.ViewModel
 import ru.perelyginva.shoppinglist.data.ShopListRepositoryImpl
 import ru.perelyginva.shoppinglist.domain.DeleteShopUseCase
