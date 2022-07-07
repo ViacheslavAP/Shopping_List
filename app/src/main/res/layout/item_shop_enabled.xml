@@ -23,6 +23,7 @@
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold"
+            tools:ignore="TextContrastCheck"
             tools:text="@string/app_name" />
 
         <TextView
@@ -32,6 +33,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/size_text_count_number"
             android:textStyle="bold"
+            tools:ignore="TextContrastCheck"
             tools:text="1" />
 
     </LinearLayout>
