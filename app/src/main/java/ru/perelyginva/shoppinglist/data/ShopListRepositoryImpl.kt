@@ -9,7 +9,8 @@ object ShopListRepositoryImpl : ShopListRepository {
 
     // создаем объект который мы возвращаем
     private val shopListLiveData = MutableLiveData<List<ShopItem>>()
-    private val shopList = mutableListOf<ShopItem>()
+    private val shopList = sortedSetOf<ShopItem>(Comparator<ShopItem>
+    { o1, o2 -> o1.id.compareTo(o2.id) })
     private var autoIncrementId = 0
 
     init {
@@ -19,8 +20,6 @@ object ShopListRepositoryImpl : ShopListRepository {
             addShopItem(item)
         }
     }
-
-
 
     override fun addShopItem(shopItem: ShopItem) {
         // устанавливаем у нашего элемента id и увеличиваем его на один
